@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace gridproject
+{
+    public class BedrockOccupation : IOccupation
+    {
+        public OccupationType Type => OccupationType.Bedrock;
+
+        public TileCoordinates sourceCoordinates { get; private set; }
+
+        public bool IsUnderground { get; set; } = true;
+
+        public void Load(Control ab)
+        {
+            ab.Text = "";
+        }
+
+        public void Reset(Control ab)
+        {
+
+        }
+
+        public void SetCoordinates(TileCoordinates tc)
+        {
+            sourceCoordinates = tc;
+        }
+    }
+}
